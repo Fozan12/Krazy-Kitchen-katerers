@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="icon.css">
+    <link rel="stylesheet" href="i_c.css">
+    <link rel="stylesheet" href="option.css">
+
+    <title>Krazy Kitchen katerers</title>
+    <style>
+        /* Style for loading screen */
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999; /* Ensure it's on top */
+        }
+
+        /* Style for loading animation */
+        .loader {
+            border: 16px solid #f3f3f3; /* Light grey */
+            border-top: 16px solid #3498db; /* Blue */
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            animation: spin 2s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Hide loading screen after 5 seconds */
+        #loading-screen.loaded {
+            display: none;
+        }
+    </style>
+</head>
+<body id="bodyy">
+    <!-- Loading Screen--> 
+    <!-- <div id="loading-screen">
+        <div class="loader"></div> --> 
+    </div>
+
+    <!-- Your content -->
+    <nav id="navbar">
+        <i id="icon" class="fas fa-home fa-2x"><span><a id="gallery" href="#gallery">GALLERY</a></span></i>
+    </nav>
+    <nav id="icon-side">
+        <center>
+            <p>Krazy Kitchen</p>
+            <p>katerers</p>
+        </center>
+    </nav>
+  
+    <nav id="option_nav">
+        <center>
+            <a id="f_o" href="#home">HOME</a>
+            <a class="op" href="manu.html">MENU</a>
+            <a class="op" href="Contact.html">ORDER</a>
+            <a class="op" href="Location.html">LOCATION</a>
+        </center> 
+    </nav> 
+    <div class="slider-container">
+        <div id="home" class="slider">
+            <img src="img2.jpg" alt="Image 1">
+            <img src="img3.jpg" alt="Image 2">
+            <img src="img4.jpg" alt="Image 3">
+            <img src="img5.jpg" alt="Image 4">
+            <img src="img6.jpg" al0t="Image 5">
+            <img src="img7.jpg" alt="Image 6">
+        </div>
+        <button class="prev" onclick="prevSlide()"><</button>
+        <button class="next" onclick="nextSlide()">></button>
+    </div>
+    <div class="container">
+        <div class="item">
+            <h1>Menu</h1>
+            <img class="all_image" src="img12.jpg" alt="Image 1">
+            <h2>You can check our menu and order food as you want.</h2>
+            <a href="manu.html"><button class="o_b">MENU</button></a>
+        </div>
+        <div class="item">
+            <h1>Location</h1>
+            <img src="img11.jpg" class="all_image" alt="Image 2">
+            <h2>You can find us.</h2>
+            <a href="Location.html"><button class="o_b">LOCATION</button></a>
+        </div>
+        <div class="item">
+            <h1>Contact</h1>
+            <img class="all_image" src="img13.jpg" alt="Image 3">
+            <h2>Also you can check our contact to order something.</h2>
+            <a href="Contact.html"><button class="o_b">CONTACT</button></a>
+        </div>
+    </div>
+
+    <script>
+        // Hide loading screen after 5 seconds
+        setTimeout(function(){
+            document.getElementById('loading-screen').classList.add('loaded');
+        }, 5000);
+
+        let currentIndex = 0;
+        const slides = document.querySelectorAll('.slider img');
+        const totalSlides = slides.length;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.style.display = 'block';
+                } else {
+                    slide.style.display = 'none';
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % totalSlides;
+            showSlide(currentIndex);
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+            showSlide(currentIndex);
+        }
+
+        showSlide(currentIndex);
+    </script>
+</body>
+</html>

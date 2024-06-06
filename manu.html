@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.menu-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.item-details {
+    flex: 1;
+    padding: 20px;
+}
+
+.item-details h2 {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+.price {
+    font-size: 1.2em;
+    color: #333;
+}
+
+button {
+    background-color: #ff6347;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff4500;
+}
+
+/* Fotter */
+
+
+footer {
+  background-color: #f0f0f0; /* Light gray background */
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;  /* Stretch footer to full width */
+}
+
+.footer-content {
+  max-width: 600px; /* Limit content width for smaller screens */
+}
+
+.disclaimer {
+  font-size: 16px;
+  color: #333; /* Dark gray text */
+  margin: 0;
+}
+
+.warning {
+  color: #f00; /* Red warning color */
+  font-weight: bold;
+  font-size: 1.2em;  /* Slightly larger than normal text */
+}
+
+.disclaimer span:first-child { /* Style the " Psst!" icon */
+  margin-right: 5px;
+  font-family: Arial, sans-serif; /* Ensure emoji display */
+}
+
+</style>
+<body>
+    <div class="menu-container">
+        <h1>Our Menu</h1>
+        <div class="menu-item">
+            <img src="img3.jpg" alt="Burger">
+            <div class="item-details">
+                <h2>Burger</h2>
+                <p class="price">$8.99</p>
+                <button onclick="makeCall('123-456-7890')">Call to Order</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img2.jpg" alt="Pizza">
+            <div class="item-details">
+                <h2>Pizza</h2>
+                <p class="price">$12.99</p>
+                <button onclick="makeCall('123-456-7890')">Call to Order</button>
+            </div>
+            
+        </div>
+        <!-- Add more menu items here -->
+        <div class="menu-item">
+            <img src="bacon-poutine-7323673_640.jpg" alt="Fries">
+            <div class="item-details">
+                <h2>Fries</h2>
+                <p class="price">$4.99</p>
+                <button onclick="makeCall('123-456-7890')">Call to Order</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="fried-chicken-7279094_640.jpg" alt="Fried Chicken">
+            <div class="item-details">
+                <h2>Fried Chicken</h2>
+                <p class="price">$9.99</p>
+                <button onclick="makeCall('123-456-7890')">Call to Order</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img4.jpg" alt="Boiled Eggs">
+            <div class="item-details">
+                <h2>Pasta</h2>
+                <p class="price">$10.99</p>
+                <button onclick="makeCall('123-456-7890')">Call to Order</button>
+            </div>
+        </div>
+        <div class="menu-item">
+            <img src="img7.jpg" alt="Fried Eggs">
+            <div class="item-details">
+                <h2>Pancake</h2>
+                <p class="price">$40.99</p>
+                <button onclick="makeCall('123-456-7890')">Call to Order</button>
+            </div>
+        </div>
+    </div>
+    <!-- Add more items similarly -->
+    
+
+    <script>function makeCall(phoneNumber) {
+        window.location.href = `tel:${phoneNumber}`;
+    }
+    </script>
+
+
+<footer>
+    <div class="footer-container">
+      <div class="footer-content">
+        <p class="disclaimer">
+          <span class="warning"> Psst!</span> Don't call us here because the batton has wrong number! 
+        </p>
+      </div>
+    </div>
+  </footer>
+  
+</body>
+</html>

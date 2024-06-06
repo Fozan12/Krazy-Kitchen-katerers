@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <title>OUR CONTACT PAGE</title>
+</head>
+<style>
+    #callButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#callButton:hover {
+    background-color: #218838;
+}
+
+
+/* copy button */
+
+div {
+    text-align: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+#copyButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#copyButton:hover {
+    background-color: #0056b3;
+}
+
+</style>
+<body>
+    <div>
+       <center> <h1 id="con_us">
+            Contact Us!
+        </h1></center>
+    </div>
+    <br>
+    <center>
+        <div class="contact">
+            <div class="cem">
+             <h2>Our Phone number and E-mail</h2>
+                <p class="Cont_Face">+1 000-111-222</p>
+                <button id="callButton">Call</button>
+    <br>
+                <input type="text" id="textToCopy" value="E-Mail: example@example.com" readonly>
+                <br>
+                <button id="copyButton">Copy Email</button>
+            </div>
+            <script>
+            document.getElementById('copyButton').addEventListener('click', function() {
+                // Select the text field
+                var copyText = document.getElementById('textToCopy');
+            
+                // Select the text inside the text field
+                copyText.select();
+                copyText.setSelectionRange(0, 99999); // For mobile devices
+            
+                // Copy the text inside the text field to the clipboard
+                navigator.clipboard.writeText(copyText.value).then(function() {
+                    alert('Text copied to clipboard');
+                }).catch(function(error) {
+                    alert('Failed to copy text: ' + error);
+                });
+            });
+            </script>
+            </div>
+        </div>
+    </center>
+<br>
+    <center>
+        <div class="contact">
+            <div class="cem">
+                <a href=""><img width="90px" class="img_face" src="con_img1.png" alt="facebook"></a>
+                <p class="Cont_Face">Follow us on Facebook</p>
+            </div>
+        </div>
+    </center>
+<hr>
+
+    <center>
+        <div class="contact">
+            <div class="cem">
+                <a href=""><img width="90px" class="img_face" src="images.png" alt="facebook"></a>
+                <p class="Cont_Face">Follow us on Linkedin</p>
+            </div>
+        </div>
+    </center>
+
+<hr>
+    <center>
+        <div class="contact">
+            <div class="cem">
+                <a href=""><img width="90px" class="img_face" src="images.jpeg" alt="facebook"></a>
+                <p class="Cont_Face">Follow us on Instagram</p>
+            </div>
+        </div>
+    </center>
+
+
+    <script>
+    document.getElementById('callButton').addEventListener('click', function() {
+        window.location.href = 'tel:+1234567890';  // Replace +1234567890 with the actual phone number
+    });
+    </script>
+</body>
+</html>

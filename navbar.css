@@ -1,0 +1,56 @@
+#navbar{
+    width: 100%;
+    height: 7vh;
+    background-color: rgba(128, 128, 128, 0.5);
+    /* margin-top: -8px; */
+}
+#icon{
+    margin-top: 10px;
+}
+#icon-side{
+    width: 100%;
+    background-color: black;
+    height: 16vh;
+    margin-top: -8px;
+    color: white;
+    font-size: 30px;
+    font-family: cursive;
+}
+#option_nav{
+    margin-top: -8px;
+    height: 10vh;
+    background-color: rgba(49, 49, 49, 0.5);
+    width: 100%;
+    margin-top: 10px;
+}
+#gallery {
+    color: black;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+#gallery:hover {
+    text-decoration: underline; /* Ensure hover effect takes precedence */
+}
+#b_c{
+    background-color: black;
+}
+.op{
+    margin-left: 2vh;
+    font-size: 20px;
+    color: white;
+    margin-top: 10px;
+}
+.op:hover{
+    color: rgba(88, 88, 88, 0.588);
+    text-decoration: none;
+}
+#f_o{
+    font-size: 20px;
+    color: white;
+    margin-top: 50px;
+}
+#f_o:hover{
+    color: rgba(88, 88, 88, 0.588);
+    text-decoration: none;
+}
